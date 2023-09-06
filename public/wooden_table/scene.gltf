@@ -122,13 +122,13 @@
   ],
   "images": [
     {
-      "uri": "textures/Default_baseColor.jpeg"
+      "uri": "wood_022_sd/map.jpg"
     },
     {
-      "uri": "textures/Default_metallicRoughness.png"
+      "uri": "wood_022_sd/roughness.jpg"
     },
     {
-      "uri": "textures/Default_normal.png"
+      "uri": "wood_022_sd/normal.jpg"
     }
   ],
   "materials": [
