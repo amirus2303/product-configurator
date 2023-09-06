@@ -26,14 +26,14 @@ const WoodenTable = (props) => {
     const texture2 = useTexture({
         map: './wooden_table/wood_025_sd/map.jpg',
         displacementMap: './wooden_table/wood_025_sd/height.png',
-
+        normalMap: './wooden_table/wood_025_sd/normal.jpg',
         roughnessMap: './wooden_table/wood_025_sd/roughness.jpg',
         aoMap: './wooden_table/wood_025_sd/aoMap.jpg',
     })
 
     texture2.encoding = SRGBColorSpace; // Set the map to sRGB
     texture2.displacementMap.colorSpace = LinearSRGBColorSpace;
-
+    texture2.normalMap.colorSpace = LinearSRGBColorSpace;
     texture2.roughnessMap.colorSpace = LinearSRGBColorSpace;
     texture2.aoMap.colorSpace = LinearSRGBColorSpace;
 
