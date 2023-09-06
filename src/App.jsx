@@ -1,26 +1,24 @@
 import { Canvas } from '@react-three/fiber'
 import './App.css'
 import Experience from './components/Experience'
-import Carousel from './components/Carousel'
+import {TableInterfaceHetre} from './components/TableInterfaceHetre'
+import {ProductSwitcher} from './components/ProductSwitcher'
+import { useGlobalContext } from './context'
+import { TableInterfaceBoisRouge } from './components/TableInterfaceBoisRouge'
 
 function App() {
-    const params = ({ camera }) => {
-        camera.lookAt(0,1,0)
-    }
+    const {counter} =useGlobalContext()
     return (
         <div className="app">
             <Canvas
-                camera={{
-                    zoom: 0.8,
-                    position: [0, 2, 5]
-                }}
-                onCreated={params}
+                shadows
+                camera={{ position: [4, 4, -12], fov: 35 }}
             >
-                <color attach="background" args={["#213547"]} />
-                <fog attach="fog" args={["#213547", 10, 20]} />
                 <Experience />
             </Canvas>
-            <Carousel />
+            <ProductSwitcher />
+            {counter===0&&<TableInterfaceHetre />}
+            {counter===1&&<TableInterfaceBoisRouge/>}
         </div>
     )
 }
