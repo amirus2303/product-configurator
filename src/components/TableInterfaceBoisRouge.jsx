@@ -39,7 +39,7 @@ export const TableInterfaceBoisRouge = () => {
             p={4}
         >
             <Stack spacing={3}>
-                <Typography variant="h6">Produits</Typography>
+                <Typography variant="h6">Configuration</Typography>
                 <Box className="glass" p={2}>
                     <ImageList sx={{ width: 100, height: 420 }} cols={1}>
                         {itemData.map((item) => (

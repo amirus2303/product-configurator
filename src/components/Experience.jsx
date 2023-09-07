@@ -1,13 +1,13 @@
-import { Center, OrbitControls, Stage } from "@react-three/drei";
+import { Center, OrbitControls, Stage, } from "@react-three/drei";
 import Table from "./Table";
-import Chair from './Chair'
 import { useGlobalContext } from "../context";
 import WoodenTable from "./WoodenTable";
+import Sofa from "./Sofa";
 
 
 const Experience = () => {
-    const {counter} =useGlobalContext();
-    const {legs} = useGlobalContext() //for rerendering
+    const { counter } = useGlobalContext();
+    //const { legs } = useGlobalContext() //for rerendering
     return (
         <>
             <OrbitControls
@@ -18,13 +18,16 @@ const Experience = () => {
             <Stage
                 intensity={1.5}
                 environment="city"
-                shadows={{ type: 'accumulative', color: "#d9afd9", colorBlend: 8, opacity: 0.4 }}
-                adjustCamera={2}
+                SoftShadows
+                shadows="contact"
+                preset="rembrandt"
+                adjustCamera={false}
             >
-                <Center>
-                    {counter===0 &&<Table />}
-                    {counter===1 &&<WoodenTable />}
-                </Center>
+                
+                    {counter === 0 && <Table scale={1.3} />}
+                    {counter === 1 && <WoodenTable scale={1.8} />}
+                    {counter === 2 && <Sofa scale={1.9}  />}
+                
             </Stage>
 
         </>

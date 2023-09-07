@@ -9,7 +9,6 @@ const Table = (props) => {
     useEffect(()=>{
         materials.Metal.color = new THREE.Color(legsColor)
     },[legsColor])
-
     
     return (
         <group {...props} dispose={null}>
