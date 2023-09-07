@@ -9,11 +9,9 @@ const Table = (props) => {
     useEffect(()=>{
         materials.Metal.color = new THREE.Color(legsColor)
     },[legsColor])
-    
     return (
         <group {...props} dispose={null}>
-            <mesh castShadow geometry={nodes.Plate.geometry} material={materials.Plate} >
-                </mesh>
+            <mesh castShadow geometry={nodes.Plate.geometry} material={materials.Plate} />
             {legs === 0 &&
                 <mesh castShadow geometry={nodes.Legs01Left.geometry} material={materials.Metal} position={[-1.5, 0, 0]} />}
             {legs === 0 &&

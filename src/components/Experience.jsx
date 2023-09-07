@@ -7,7 +7,7 @@ import Sofa from "./Sofa";
 
 const Experience = () => {
     const { counter } = useGlobalContext();
-    //const { legs } = useGlobalContext() //for rerendering
+
     return (
         <>
             <OrbitControls
@@ -19,12 +19,12 @@ const Experience = () => {
                 intensity={1.5}
                 environment="city"
                 SoftShadows
-                shadows="contact"
+                shadows={{type: "accumulative", color:"#f0f0f0f", colorBlend: 2, opacity: 2}}
                 preset="rembrandt"
                 adjustCamera={false}
             >
                 
-                    {counter === 0 && <Table scale={1.3} />}
+                    {counter === 0 && <Table scale={1.2} />}
                     {counter === 1 && <WoodenTable scale={1.8} />}
                     {counter === 2 && <Sofa scale={1.9}  />}
                 

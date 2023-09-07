@@ -13,7 +13,7 @@ const Sofa = (props) => {
     return (
         <group ref={group} {...props} dispose={null} rotation={[0,Math.PI,0]} >
             <group name="Scene" >
-                <mesh name="sofa" geometry={nodes.sofa.geometry} material={materials['default']} position={[0.118, 0.352, -0.125]} scale={0.01} />
+                <mesh castShadow name="sofa" geometry={nodes.sofa.geometry} material={materials['default']} position={[0.118, 0.352, -0.125]} scale={0.01} />
             </group>
         </group>
     )

@@ -31,7 +31,6 @@ const WoodenTable = (props) => {
         aoMap: './wooden_table/wood_025_sd/aoMap.jpg',
     })
     const [texture, setTexture] = useState(texture1)
-
     useEffect(() => {
         materialRef.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
         materialRef.current.map.flipY = false;
@@ -55,6 +54,7 @@ const WoodenTable = (props) => {
 
         materialRef.current.needsUpdate = true;
     }, [table2Texture, texture])
+    
     
     useEffect(() => {
         if (table2Texture === 'texture1') {
