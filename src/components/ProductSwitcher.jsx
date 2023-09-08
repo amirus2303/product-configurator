@@ -3,13 +3,13 @@ import {
     ImageList,
     ImageListItem,
     ImageListItemBar,
-    ListSubheader,
     Stack,
     Typography,
 } from "@mui/material";
 import Table1 from '../assets/table1.png'
 import Table2 from '../assets/table2.png'
 import Sofa from '../assets/sofa.png'
+import Bahut from '../assets/bahut.jpg'
 
 const itemData = [
     {
@@ -24,10 +24,14 @@ const itemData = [
         img: Sofa,
         title: 'Sofa',
     },
+    {
+        img: Bahut,
+        title: 'Bahut',
+    },
 ];
 import { useGlobalContext } from "../context";
 export const ProductSwitcher = () => {
-    const { counter, setCounter } = useGlobalContext()
+    const { setCounter } = useGlobalContext()
     return (
         <Box
             sx={{
@@ -40,7 +44,7 @@ export const ProductSwitcher = () => {
             <Stack spacing={3}>
                 <Typography variant="h6">Produits</Typography>
                 <Box className="glass" p={4}>
-                    <ImageList sx={{ width: 150, height: 480 }} cols={1}>
+                    <ImageList sx={{ width: 150, height: 650 }} cols={1}>
                         {itemData.map((item, index) => (
                             <ImageListItem key={item.img} >
                                 <img
@@ -48,7 +52,7 @@ export const ProductSwitcher = () => {
                                     srcSet={`${item.img}?w=150&fit=crop&auto=format&dpr=2 2x`}
                                     alt={item.title}
                                     loading="lazy"
-                                    onClick ={()=>{setCounter(index);}}
+                                    onClick={() => { setCounter(index); }}
                                 />
                                 <ImageListItemBar
                                     title={item.title}
