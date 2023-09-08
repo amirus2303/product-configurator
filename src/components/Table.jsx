@@ -6,11 +6,11 @@ import * as THREE from 'three'
 const Table = (props) => {
     const { nodes, materials } = useGLTF('./table/Table.gltf')
     const { legs, legsColor } = useGlobalContext()
-    useEffect(()=>{
+    useEffect(() => {
         materials.Metal.color = new THREE.Color(legsColor)
-    },[legsColor])
+    }, [legsColor])
     return (
-        <group {...props} dispose={null}>
+        <group {...props} dispose={null} position={[0, 0, -3]}>
             <mesh castShadow geometry={nodes.Plate.geometry} material={materials.Plate} />
             {legs === 0 &&
                 <mesh castShadow geometry={nodes.Legs01Left.geometry} material={materials.Metal} position={[-1.5, 0, 0]} />}

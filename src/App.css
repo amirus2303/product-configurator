@@ -2,29 +2,3 @@
 	width: 100vw;
 	height: 100vh;
 }
-
-
-.carousel-container {
-	position: absolute;
-	top: 0;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	width: 50px;
-	height: 100vh;
-}
-.carousel-container.carousel-container-left {
-	left: 0;
-}
-.carousel-container.carousel-container-right {
-	right: 0;
-}
-
-
-.carousel-container .chevron{
-    width: 50px;
-    height: 50px;
-    color: blue;
-    z-index: 100;
-}
-

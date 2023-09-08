@@ -54,8 +54,8 @@ const WoodenTable = (props) => {
 
         materialRef.current.needsUpdate = true;
     }, [table2Texture, texture])
-    
-    
+
+
     useEffect(() => {
         if (table2Texture === 'texture1') {
             setTexture(texture1)
@@ -71,7 +71,7 @@ const WoodenTable = (props) => {
 
 
     return (
-        <group {...props} dispose={null}>
+        <group {...props} dispose={null} position={[0, 0, 0]}>
             <group rotation={[-Math.PI / 2, 0, 0]} scale={0.036}>
                 <mesh castShadow geometry={nodes.defaultMaterial.geometry} rotation={[Math.PI / 2, Math.PI * .25, 0]} >
                     <meshStandardMaterial ref={materialRef} key={table2Texture} {...texture} />

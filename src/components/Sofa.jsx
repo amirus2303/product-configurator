@@ -11,7 +11,7 @@ const Sofa = (props) => {
     const { nodes, materials } = useGLTF('./sofa/sofa_yellow.gltf')
 
     return (
-        <group ref={group} {...props} dispose={null} rotation={[0,Math.PI,0]} >
+        <group ref={group} {...props} dispose={null} position={[0, -0.5, 0]} >
             <group name="Scene" >
                 <mesh castShadow name="sofa" geometry={nodes.sofa.geometry} material={materials['default']} position={[0.118, 0.352, -0.125]} scale={0.01} />
             </group>
