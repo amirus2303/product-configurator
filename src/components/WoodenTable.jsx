@@ -2,6 +2,7 @@ import { useGLTF, useTexture } from '@react-three/drei'
 import { useGlobalContext } from '../context'
 import { useEffect, useRef, useState } from 'react'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
+import LevaComponent from './LevaComponent';
 
 const WoodenTable = (props) => {
     const materialRef = useRef()
@@ -68,13 +69,13 @@ const WoodenTable = (props) => {
         }
 
     }, [table2Texture])
-
+    const { envMapIntensity } = LevaComponent()
 
     return (
         <group {...props} dispose={null} position={[0, 0, 0]}>
             <group rotation={[-Math.PI / 2, 0, 0]} scale={0.036}>
                 <mesh castShadow geometry={nodes.defaultMaterial.geometry} rotation={[Math.PI / 2, Math.PI * .25, 0]} >
-                    <meshStandardMaterial ref={materialRef} key={table2Texture} {...texture} />
+                    <meshStandardMaterial envMapIntensity={envMapIntensity} ref={materialRef} key={table2Texture} {...texture} />
                 </mesh>
             </group>
         </group>
