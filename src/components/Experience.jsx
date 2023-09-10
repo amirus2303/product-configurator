@@ -19,9 +19,9 @@ const Experience = () => {
     const lightHelper = useRef()
     const lightHelper2 = useRef()
     const lightHelper3 = useRef()
-    useHelper(lightHelper, THREE.DirectionalLightHelper)
-    useHelper(lightHelper2, THREE.DirectionalLightHelper)
-    useHelper(lightHelper3, THREE.DirectionalLightHelper)
+    // useHelper(lightHelper, THREE.DirectionalLightHelper)
+    // useHelper(lightHelper2, THREE.DirectionalLightHelper)
+    // useHelper(lightHelper3, THREE.DirectionalLightHelper)
 
     return (
         <>
