@@ -39,7 +39,7 @@ const Experience = () => {
             <Suspense fallback={<Html><h3>Chargement...</h3></Html>}>
                 {counter === 0 && <LazyTable2 rotation={[0, Math.PI * 0.25, 0]} />}
                 {counter === 1 && <LazyWoodenTable scale={0.8} />}
-                {counter === 2 && <LazySofa2 scale={0.8} rotation={[0, Math.PI * 0.25, 0]} />}
+                {counter === 2 && <LazySofa2 scale={1.2} rotation={[0, Math.PI * 0.25, 0]} position={[0, -0.5, 0]} />}
                 {counter === 3 && <LazyBahut scale={1.3} rotation={[0, -Math.PI * 0.9, 0]} position={[0, -0.5, 0]} />}
             </Suspense>
         </>
