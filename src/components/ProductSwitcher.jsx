@@ -6,15 +6,15 @@ import {
     Stack,
     Typography,
 } from "@mui/material";
-import Table1 from '../assets/table1.png'
+import Table1 from '../assets/chair1.png'
 import Table2 from '../assets/table2.png'
 import Sofa from '../assets/sofa.png'
-import Bahut from '../assets/bahut.jpg'
+import Bahut from '../assets/bahut.png'
 
 const itemData = [
     {
         img: Table1,
-        title: 'Table hetre',
+        title: 'Chaise',
     },
     {
         img: Table2,

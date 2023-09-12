@@ -1,6 +1,5 @@
 import { useGLTF, useTexture } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
-import LevaComponent from './LevaComponent'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
 
 const Sofa2 = (props) => {
@@ -18,7 +17,6 @@ const Sofa2 = (props) => {
 		roughnessMap: './sofa_visio/roughness2.jpg',
 		metalnessMap: './sofa_visio/metalic2.jpg',
 	})
-	const { envMapIntensity } = LevaComponent()
 
 	const meshRef1 = useRef()
 	const meshRef2 = useRef()
@@ -49,11 +47,11 @@ const Sofa2 = (props) => {
 	}, [])
 	return (
 		<group {...props} dispose={null}>
-			<mesh geometry={nodes.part_01.geometry} material={nodes.part_01.material} position={[0, 0.004, 0]} scale={0.01}>
-				<meshStandardMaterial ref={meshRef1} envMapIntensity={envMapIntensity} {...texture1} />
+			<mesh castShadow geometry={nodes.part_01.geometry} material={nodes.part_01.material} position={[0.065, 0.545, -0.444]} scale={0.01} >
+				<meshStandardMaterial ref={meshRef1} envMapIntensity={0.06} {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.part_02.geometry} material={nodes.part_02.material} position={[-0.887, 0.393, 0]} scale={0.01}>
-				<meshStandardMaterial ref={meshRef2} envMapIntensity={envMapIntensity} {...texture2} />
+			<mesh castShadow geometry={nodes.part_02.geometry} material={nodes.part_02.material} position={[0.064, 0.329, -0.458]} scale={0.01} >
+				<meshStandardMaterial ref={meshRef2} envMapIntensity={0.06} {...texture2} />
 			</mesh>
 		</group>
 	)

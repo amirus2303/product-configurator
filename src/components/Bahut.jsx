@@ -1,7 +1,6 @@
 import { useGLTF, useTexture } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
-import LevaComponent from './LevaComponent';
 
 const Bahut = (props) => {
 	const { nodes } = useGLTF('./bahut/bahut.glb')
@@ -62,41 +61,40 @@ const Bahut = (props) => {
 		configTexture(meshRef11);
 	}, [])
 
-	const { envMapIntensity } = LevaComponent()
 	return (
 		<group {...props} dispose={null} >
-			<mesh geometry={nodes.upper_01.geometry} material={nodes.upper_01.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef1} {...texture1} />
+			<mesh castShadow geometry={nodes.upper_01.geometry} material={nodes.upper_01.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef1} {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Lateral_01.geometry} material={nodes.Lateral_01.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef2} {...texture1} />
+			<mesh castShadow geometry={nodes.Lateral_01.geometry} material={nodes.Lateral_01.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef2} {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Lateral_02.geometry} material={nodes.Lateral_02.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef3}  {...texture1} />
+			<mesh castShadow geometry={nodes.Lateral_02.geometry} material={nodes.Lateral_02.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef3}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Front_03.geometry} material={nodes.Front_03.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef4}  {...texture1} />
+			<mesh castShadow geometry={nodes.Front_03.geometry} material={nodes.Front_03.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef4}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Front_04.geometry} material={nodes.Front_04.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef5}  {...texture1} />
+			<mesh castShadow geometry={nodes.Front_04.geometry} material={nodes.Front_04.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef5}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Front_05.geometry} material={nodes.Front_05.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef6}  {...texture1} />
+			<mesh castShadow geometry={nodes.Front_05.geometry} material={nodes.Front_05.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef6}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Front_01.geometry} material={nodes.Front_01.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef7}  {...texture1} />
+			<mesh castShadow geometry={nodes.Front_01.geometry} material={nodes.Front_01.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef7}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Front_02.geometry} material={nodes.Front_02.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef8}  {...texture1} />
+			<mesh castShadow geometry={nodes.Front_02.geometry} material={nodes.Front_02.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef8}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Legs.geometry} material={nodes.Legs.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef9}  {...texture1} />
+			<mesh castShadow geometry={nodes.Legs.geometry} material={nodes.Legs.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef9}  {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.down_01.geometry} material={nodes.down_01.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef10} {...texture1} />
+			<mesh castShadow geometry={nodes.down_01.geometry} material={nodes.down_01.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef10} {...texture1} />
 			</mesh>
-			<mesh geometry={nodes.Back_01.geometry} material={nodes.Back_01.material} position={[0, 0.787, 0]} scale={0.01} >
-				<meshStandardMaterial envMapIntensity={envMapIntensity} ref={meshRef11} {...texture1} />
+			<mesh castShadow geometry={nodes.Back_01.geometry} material={nodes.Back_01.material} position={[0, 0.787, 0]} scale={0.01} >
+				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef11} {...texture1} />
 			</mesh>
 		</group>
 	)

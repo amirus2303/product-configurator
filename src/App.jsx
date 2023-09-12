@@ -21,7 +21,7 @@ function App() {
                 <Experience />
             </Canvas>
             <ProductSwitcher />
-            {counter === 0 && <TableInterfaceHetre />}
+            {/* {counter === 0 && <TableInterfaceHetre />} */}
             {counter === 1 && <TableInterfaceBoisRouge />}
         </div>
     )
