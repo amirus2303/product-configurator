@@ -9,6 +9,7 @@ const LazyWoodenTable = React.lazy(() => import('./WoodenTable'));
 const LazySofa2 = React.lazy(() => import('./Sofa2'));
 const LazyBahut = React.lazy(() => import('./Bahut'));
 const WovenChair = React.lazy(() => import('./WovenChair'));
+const LazySofa3 = React.lazy(() => import('./Sofa3'));
 
 
 const Experience = () => {
@@ -35,7 +36,7 @@ const Experience = () => {
             <Suspense fallback={<Html><h3>Chargement...</h3></Html>}>
 
                 {counter === 0 && <WovenChair rotation={[0, Math.PI * 0.25, 0]} scale={0.025} position={[0, -0.5, 0]} />}
-                {counter === 1 && <LazyWoodenTable scale={1.1} position={[0, -0.5, 0]} />}
+                {counter === 1 && <LazySofa3 scale={2.5} position={[0, -0.5, 0]} />}
                 {counter === 2 && <LazySofa2 scale={1.7} rotation={[0, Math.PI * 0.1, 0]} position={[0, -0.5, 0]} />}
                 {counter === 3 && <LazyBahut scale={1.5} rotation={[0, -Math.PI * 0.9, 0]} position={[0, -0.4, 0]} />}
 

@@ -49,7 +49,7 @@ export const TableInterfaceBoisRouge = () => {
                                     srcSet={`${item.img}?w=100&fit=crop&auto=format&dpr=2 2x`}
                                     alt={item.title}
                                     loading="lazy"
-                                    onClick ={()=>{setTable2Texture(item.texture)}}
+                                    onClick={() => { setTable2Texture(item.texture) }}
                                 />
                             </ImageListItem>
                         ))}
