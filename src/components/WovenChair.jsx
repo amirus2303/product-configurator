@@ -13,7 +13,7 @@ const WovenChair = (props) => {
 
   const configTexture = (ref) => {
     ref.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
-    ref.current.map.flipY = false;
+    //ref.current.map.flipY = false;
     ref.current.map.needsUpdate = true;
 
 
@@ -22,7 +22,7 @@ const WovenChair = (props) => {
     ref.current.normalMap.needsUpdate = true;
 
     ref.current.roughnessMap.colorSpace = LinearSRGBColorSpace;
-    ref.current.roughnessMap.flipY = false;
+    //ref.current.roughnessMap.flipY = false;
     ref.current.roughnessMap.needsUpdate = true;
 
     ref.current.needsUpdate = true;
