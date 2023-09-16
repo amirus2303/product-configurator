@@ -2,6 +2,7 @@ import React, { Suspense } from "react";
 import { Center } from "@react-three/drei";
 import { OrbitControls, Environment, ContactShadows, Html } from "@react-three/drei";
 import { useGlobalContext } from "../context";
+import Cobra1 from "./Cobra1";
 
 
 
@@ -35,10 +36,11 @@ const Experience = () => {
             <ContactShadows position={[0, -0.5, 0]} opacity={0.25} scale={10} blur={1.5} far={2} />
             <Suspense fallback={<Html><h3>Chargement...</h3></Html>}>
 
-                {counter === 0 && <WovenChair rotation={[0, Math.PI * 0.25, 0]} scale={0.025} position={[0, -0.5, 0]} />}
-                {counter === 1 && <LazySofa3 scale={2.5} position={[0, -0.5, 0]} />}
-                {counter === 2 && <LazySofa2 scale={1.7} rotation={[0, Math.PI * 0.1, 0]} position={[0, -0.5, 0]} />}
-                {counter === 3 && <LazyBahut scale={1.5} rotation={[0, -Math.PI * 0.9, 0]} position={[0, -0.4, 0]} />}
+                {counter === 0 && <Cobra1 rotation={[0, Math.PI * 0.25, 0]} scale={3} position={[0, -0.5, 0]} />}
+                {counter === 1 && <WovenChair rotation={[0, Math.PI * 0.5, 0]} scale={0.025} position={[0, -0.5, 0]} />}
+                {counter === 2 && <LazySofa3 scale={2.5} position={[0, -0.5, 0]} />}
+                {counter === 3 && <LazySofa2 scale={1.7} rotation={[0, Math.PI * 0.1, 0]} position={[0, -0.5, 0]} />}
+                {counter === 4 && <LazyBahut scale={1.5} rotation={[0, -Math.PI * 0.9, 0]} position={[0, -0.4, 0]} />}
 
             </Suspense>
         </>

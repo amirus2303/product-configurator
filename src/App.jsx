@@ -1,12 +1,11 @@
 import { Canvas } from '@react-three/fiber'
 import './App.css'
 import Experience from './components/Experience'
-import { TableInterfaceHetre } from './components/TableInterfaceHetre'
+
 import { ProductSwitcher } from './components/ProductSwitcher'
 import { useGlobalContext } from './context'
 import { TableInterfaceBoisRouge } from './components/TableInterfaceBoisRouge'
-import { useHelper } from '@react-three/drei'
-import * as THREE from "three"
+import { Cobra1Interface } from './components/Cobra1Interface'
 import { useRef } from 'react'
 
 function App() {
@@ -21,7 +20,7 @@ function App() {
                 <Experience />
             </Canvas>
             <ProductSwitcher />
-            {/* {counter === 0 && <TableInterfaceHetre />} */}
+            {counter === 0 && <Cobra1Interface />}
             {counter === 1 && <TableInterfaceBoisRouge />}
         </div>
     )

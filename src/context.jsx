@@ -7,6 +7,7 @@ const AppProvider = ({ children }) => {
     const [legs, setLegs] = useState(0);
     const [legsColor, setLegsColor] = useState('#777777');
     const [table2Texture, setTable2Texture] = useState('texture1');
+    const [cobra1Texture, setCobra1Texture] = useState('texture1');
     return (
         <AppContext.Provider
             value={{
@@ -17,7 +18,9 @@ const AppProvider = ({ children }) => {
                 legsColor,
                 setLegsColor,
                 table2Texture,
-                setTable2Texture
+                setTable2Texture,
+                cobra1Texture,
+                setCobra1Texture
             }}>
             {children}
         </AppContext.Provider>
