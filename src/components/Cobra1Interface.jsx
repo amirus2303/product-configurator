@@ -5,8 +5,8 @@ import {
     Stack,
     Typography,
 } from "@mui/material";
-import Table1 from '../assets/cobra1-couleur1.png'
-import Table2 from '../assets/cobra1-couleur2.png'
+import Table1 from '../assets/cobra1couleur1.png'
+import Table2 from '../assets/cobra1couleur2.png'
 
 
 const itemData = [
