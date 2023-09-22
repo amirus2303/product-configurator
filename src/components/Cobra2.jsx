@@ -39,7 +39,7 @@ const Cobra2 = (props) => {
 
     return (
         <group {...props} dispose={null}>
-            <mesh castShadow receiveShadow geometry={nodes.New_object.geometry}  position={[0, 39.293, 0]} rotation={[Math.PI / 2, 0, 0]} >
+            <mesh castShadow receiveShadow geometry={nodes.New_object.geometry} position={[0, 39.293, 0]} rotation={[Math.PI / 2, 0, 0]} >
                 <meshStandardMaterial ref={meshRef1} envMapIntensity={0.01} {...texture1} />
             </mesh>
         </group>
