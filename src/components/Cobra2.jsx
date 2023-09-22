@@ -32,34 +32,20 @@ const Cobra2 = (props) => {
     }
 
     const meshRef1 = useRef()
-    const meshRef2 = useRef()
-    const meshRef3 = useRef()
-    const meshRef4 = useRef()
+
     useEffect(() => {
         configTexture(meshRef1);
-        configTexture(meshRef2);
-        configTexture(meshRef3);
-        configTexture(meshRef4);
     }, [])
 
 
     return (
-
-        <group {...props} dispose={null}>
-            <mesh castShadow receiveShadow geometry={nodes.Object004.geometry} position={[0.019, 0.384, -0.043]}  >
-                <meshStandardMaterial envMapIntensity={0.06} ref={meshRef1} {...texture1} />
-            </mesh>
-            <mesh castShadow receiveShadow geometry={nodes.Object005.geometry} position={[0.006, 0.24, -0.028]}  >
-                <meshStandardMaterial envMapIntensity={0.06} ref={meshRef2} {...texture1} />
-            </mesh>
-            <mesh castShadow receiveShadow geometry={nodes.Object006.geometry} position={[-0.005, 0.399, -0.015]}  >
-                <meshStandardMaterial envMapIntensity={0.06} ref={meshRef3} {...texture1} />
-            </mesh>
-            <mesh castShadow receiveShadow geometry={nodes['5327684__240221P001'].geometry} position={[0.007, 0.036, -0.068]}  >
-                <meshStandardMaterial envMapIntensity={0.06} ref={meshRef4} {...texture1} />
-            </mesh>
-        </group>
-
+        <>
+            <group {...props} dispose={null}>
+                <mesh castShadow geometry={nodes.New_object.geometry} position={[0, 39.293, 0]} rotation={[Math.PI / 2, 0, 0]} >
+                    <meshStandardMaterial ref={meshRef1} envMapIntensity={0.01} {...texture1} />
+                </mesh>
+            </group>
+        </>
     )
 }
 
