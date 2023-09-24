@@ -1,5 +1,5 @@
 
-import { useGLTF, useTexture } from '@react-three/drei'
+import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
 
@@ -46,6 +46,12 @@ const Sofa3 = (props) => {
 			<mesh castShadow receiveShadow geometry={nodes.sofa_02_Seat.geometry} material={materials.sofa_02} position={[0, 0, 0.031]} >
 				<meshStandardMaterial ref={meshRef2} {...texture1} envMapIntensity={0.2} />
 			</mesh>
+
+            <Environment background>
+                <Lightformer intensity={40} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
+                <Lightformer intensity={40} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
+                <Lightformer intensity={40} rotation-y={Math.PI } position={[2, 2, 3]} scale={[20, 1, 30]} />
+            </Environment>
 		</group>
 	)
 }

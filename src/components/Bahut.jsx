@@ -1,4 +1,4 @@
-import { useGLTF, useTexture } from '@react-three/drei'
+import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
 
@@ -96,6 +96,12 @@ const Bahut = (props) => {
 			<mesh castShadow geometry={nodes.Back_01.geometry} material={nodes.Back_01.material} position={[0, 0.787, 0]} scale={0.01} >
 				<meshStandardMaterial envMapIntensity={0.06} ref={meshRef11} {...texture1} />
 			</mesh>
+
+            <Environment background>
+                <Lightformer intensity={80} color={'white'} rotation-y={Math.PI / 2} position={[-5, 0, 1]} scale={[20, 1, 1]} />
+                <Lightformer intensity={40} rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[20, 0.9, 1]} />
+                <Lightformer intensity={100} rotation-y={Math.PI } position={[2, 1, 5]} scale={[20, 1, 30]} />
+            </Environment>
 		</group>
 	)
 }

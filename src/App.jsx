@@ -14,8 +14,7 @@ function App() {
     return (
         <div className="app">
             <Canvas
-                shadows
-                camera={{ position: [0, 2, 6], fov: 45 }}
+                shadows camera={{ position: [4, 2.5, 8], fov: 35 }}
             >
                 <Experience />
             </Canvas>
