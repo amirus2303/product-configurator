@@ -33,7 +33,7 @@ const WovenChair = (props) => {
 
     }, [])
     return (
-        <group {...props} dispose={null}>
+        <group {...props} dispose={null} >
             <mesh castShadow receiveShadow geometry={nodes.Aset_props__M_wjglah2s_00_LOD2.geometry} material={nodes.Aset_props__M_wjglah2s_00_LOD2.material}>
                 <meshStandardMaterial ref={meshRef1} envMapIntensity={0.3} {...texture1} />
             </mesh>
