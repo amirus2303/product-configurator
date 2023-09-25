@@ -45,9 +45,9 @@ const Cobra2 = (props) => {
                     <meshStandardMaterial ref={meshRef1} {...texture1} />
                 </mesh>
                 <Environment background>
-                    <Lightformer intensity={10} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
+                    <Lightformer intensity={20} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
                     <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
-                    <Lightformer intensity={10} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />
+                    <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />
                 </Environment>
             </group>
         </>

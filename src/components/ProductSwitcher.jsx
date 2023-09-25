@@ -6,11 +6,12 @@ import {
     Stack,
     Typography,
 } from "@mui/material";
-import Cobra1 from '../assets/cobra1.png'
+import Cobra1 from '../assets/cobra2.png'
 import Table1 from '../assets/chair1.png'
 import Table2 from '../assets/sofa3.png'
 import Sofa from '../assets/sofa.png'
 import Bahut from '../assets/bahut.png'
+import Tricot1 from '../assets/tricot1.png'
 
 const itemData = [
     {
@@ -33,6 +34,10 @@ const itemData = [
         img: Bahut,
         title: 'Bahut',
     },
+    {
+        img: Tricot1,
+        title: 'Teeshirt',
+    }
 ];
 import { useGlobalContext } from "../context";
 export const ProductSwitcher = () => {

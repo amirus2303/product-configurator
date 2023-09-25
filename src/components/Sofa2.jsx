@@ -1,65 +1,65 @@
-import { useGLTF, useTexture, Environment,Lightformer } from '@react-three/drei'
+import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
 import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
 
 const Sofa2 = (props) => {
-	const { nodes } = useGLTF('./sofa_visio/sofa_visio.glb')
+    const { nodes } = useGLTF('./sofa_visio/sofa_visio.glb')
 
-	const texture1 = useTexture({
-		map: './sofa_visio/diffuse1.jpg',
-		normalMap: './sofa_visio/normal1.jpg',
-		roughnessMap: './sofa_visio/roughness1.jpg',
-		metalnessMap: './sofa_visio/metalic1.jpg',
-	})
-	const texture2 = useTexture({
-		map: './sofa_visio/diffuse2.jpg',
-		normalMap: './sofa_visio/normal2.jpg',
-		roughnessMap: './sofa_visio/roughness2.jpg',
-		metalnessMap: './sofa_visio/metalic2.jpg',
-	})
+    const texture1 = useTexture({
+        map: './sofa_visio/diffuse1.jpg',
+        normalMap: './sofa_visio/normal1.jpg',
+        roughnessMap: './sofa_visio/roughness1.jpg',
+        metalnessMap: './sofa_visio/metalic1.jpg',
+    })
+    const texture2 = useTexture({
+        map: './sofa_visio/diffuse2.jpg',
+        normalMap: './sofa_visio/normal2.jpg',
+        roughnessMap: './sofa_visio/roughness2.jpg',
+        metalnessMap: './sofa_visio/metalic2.jpg',
+    })
 
-	const meshRef1 = useRef()
-	const meshRef2 = useRef()
-	const configTexture = (ref) => {
-		ref.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
-		ref.current.map.flipY = false;
-		ref.current.map.needsUpdate = true;
+    const meshRef1 = useRef()
+    const meshRef2 = useRef()
+    const configTexture = (ref) => {
+        ref.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
+        ref.current.map.flipY = false;
+        ref.current.map.needsUpdate = true;
 
 
-		ref.current.normalMap.colorSpace = LinearSRGBColorSpace;
-		ref.current.normalMap.flipY = false;
-		ref.current.normalMap.needsUpdate = true;
+        ref.current.normalMap.colorSpace = LinearSRGBColorSpace;
+        ref.current.normalMap.flipY = false;
+        ref.current.normalMap.needsUpdate = true;
 
-		ref.current.roughnessMap.colorSpace = LinearSRGBColorSpace;
-		ref.current.roughnessMap.flipY = false;
-		ref.current.roughnessMap.needsUpdate = true;
+        ref.current.roughnessMap.colorSpace = LinearSRGBColorSpace;
+        ref.current.roughnessMap.flipY = false;
+        ref.current.roughnessMap.needsUpdate = true;
 
-		ref.current.metalnessMap.colorSpace = LinearSRGBColorSpace;
-		ref.current.metalnessMap.flipY = false;
-		ref.current.metalnessMap.needsUpdate = true;
+        ref.current.metalnessMap.colorSpace = LinearSRGBColorSpace;
+        ref.current.metalnessMap.flipY = false;
+        ref.current.metalnessMap.needsUpdate = true;
 
-		ref.current.needsUpdate = true;
-	}
-	useEffect(() => {
-		configTexture(meshRef1);
-		configTexture(meshRef2);
+        ref.current.needsUpdate = true;
+    }
+    useEffect(() => {
+        configTexture(meshRef1);
+        configTexture(meshRef2);
 
-	}, [])
-	return (
-		<group {...props} dispose={null}>
-			<mesh castShadow geometry={nodes.part_01.geometry} material={nodes.part_01.material} position={[0.065, 0.545, -0.444]} scale={0.01} >
-				<meshStandardMaterial ref={meshRef1} envMapIntensity={0.06} {...texture1} />
-			</mesh>
-			<mesh castShadow geometry={nodes.part_02.geometry} material={nodes.part_02.material} position={[0.064, 0.329, -0.458]} scale={0.01} >
-				<meshStandardMaterial ref={meshRef2} envMapIntensity={0.06} {...texture2} />
-			</mesh>
+    }, [])
+    return (
+        <group {...props} dispose={null}>
+            <mesh castShadow geometry={nodes.part_01.geometry} material={nodes.part_01.material} position={[0.065, 0.545, -0.444]} scale={0.01} >
+                <meshStandardMaterial ref={meshRef1}  {...texture1} />
+            </mesh>
+            <mesh castShadow geometry={nodes.part_02.geometry} material={nodes.part_02.material} position={[0.064, 0.329, -0.458]} scale={0.01} >
+                <meshStandardMaterial ref={meshRef2}  {...texture2} />
+            </mesh>
             <Environment background>
-                <Lightformer intensity={80} color={'white'} rotation-y={Math.PI / 2} position={[-5, 0, 1]} scale={[20, 1, 1]} />
-                <Lightformer intensity={40} rotation-y={Math.PI / 2} position={[-5, 2, -1]} scale={[20, 0.9, 1]} />
-                <Lightformer intensity={100} rotation-y={Math.PI } position={[2, 2, 3]} scale={[20, 1, 30]} />
+                <Lightformer intensity={20} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
+                <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
+                <Lightformer intensity={60} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />
             </Environment>
-		</group>
-	)
+        </group>
+    )
 }
 
 export default Sofa2;
