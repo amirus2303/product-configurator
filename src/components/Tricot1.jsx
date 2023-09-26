@@ -22,7 +22,7 @@ const Tricot1 = (props) => {
 
     return (
         <group {...props} dispose={null}>
-            <mesh geometry={nodes.Pattern2D_44509.geometry} material={nodes.Pattern2D_44509.material} position={[0, 0.349, -0.043]} >
+            <mesh castShadow geometry={nodes.Pattern2D_21356.geometry} position={[0, 0.333, -0.045]} >
                 <meshStandardMaterial ref={meshRef1} {...texture1} side={DoubleSide} />
             </mesh>
             <Environment background>
