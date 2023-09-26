@@ -1,6 +1,6 @@
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
-import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
+import configTexture from '../utils/configtexture';
 
 const Bahut = (props) => {
     const { nodes } = useGLTF('./bahut/bahut.glb')
@@ -24,29 +24,7 @@ const Bahut = (props) => {
     const meshRef10 = useRef()
     const meshRef11 = useRef()
 
-    const configTexture = (ref) => {
-        ref.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
-        ref.current.map.flipY = false;
-        ref.current.map.needsUpdate = true;
 
-        ref.current.displacementMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.displacementMap.flipY = false;
-        ref.current.displacementMap.needsUpdate = false;
-
-        ref.current.normalMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.normalMap.flipY = false;
-        ref.current.normalMap.needsUpdate = true;
-
-        ref.current.roughnessMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.roughnessMap.flipY = false;
-        ref.current.roughnessMap.needsUpdate = true;
-
-        ref.current.metalnessMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.metalnessMap.flipY = false;
-        ref.current.metalnessMap.needsUpdate = true;
-
-        ref.current.needsUpdate = true;
-    }
     useEffect(() => {
         configTexture(meshRef1);
         configTexture(meshRef2);

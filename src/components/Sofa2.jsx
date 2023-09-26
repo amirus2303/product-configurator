@@ -1,6 +1,6 @@
 import { useGLTF, useTexture, Environment, Lightformer } from '@react-three/drei'
 import { useRef, useEffect } from 'react'
-import { SRGBColorSpace, LinearSRGBColorSpace } from 'three';
+import configTexture from '../utils/configtexture';
 
 const Sofa2 = (props) => {
     const { nodes } = useGLTF('./sofa_visio/sofa_visio.glb')
@@ -20,26 +20,7 @@ const Sofa2 = (props) => {
 
     const meshRef1 = useRef()
     const meshRef2 = useRef()
-    const configTexture = (ref) => {
-        ref.current.map.colorSpace = SRGBColorSpace; // Set the map to sRGB
-        ref.current.map.flipY = false;
-        ref.current.map.needsUpdate = true;
 
-
-        ref.current.normalMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.normalMap.flipY = false;
-        ref.current.normalMap.needsUpdate = true;
-
-        ref.current.roughnessMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.roughnessMap.flipY = false;
-        ref.current.roughnessMap.needsUpdate = true;
-
-        ref.current.metalnessMap.colorSpace = LinearSRGBColorSpace;
-        ref.current.metalnessMap.flipY = false;
-        ref.current.metalnessMap.needsUpdate = true;
-
-        ref.current.needsUpdate = true;
-    }
     useEffect(() => {
         configTexture(meshRef1);
         configTexture(meshRef2);
