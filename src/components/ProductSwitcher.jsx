@@ -12,6 +12,7 @@ import Table2 from '../assets/sofa3.png'
 import Sofa from '../assets/sofa.png'
 import Bahut from '../assets/bahut.png'
 import Tricot1 from '../assets/tricot1.png'
+import Lampe1 from '../assets/lampe1.png'
 
 const itemData = [
     {
@@ -37,6 +38,10 @@ const itemData = [
     {
         img: Tricot1,
         title: 'Teeshirt',
+    },
+    {
+        img: Lampe1,
+        title: 'Lampe',
     }
 ];
 import { useGlobalContext } from "../context";

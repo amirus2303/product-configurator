@@ -20,7 +20,7 @@ function App() {
             </Canvas>
             <ProductSwitcher />
             {/* {counter === 0 && <Cobra1Interface />} */}
-            {counter === 1 && <TableInterfaceBoisRouge />}
+            {/* {counter === 1 && <TableInterfaceBoisRouge />} */}
         </div>
     )
 }

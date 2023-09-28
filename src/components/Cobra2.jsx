@@ -24,7 +24,7 @@ const Cobra2 = (props) => {
                 <mesh castShadow geometry={nodes.New_object.geometry} position={[0, 39.293, 0]} rotation={[Math.PI / 2, 0, 0]} >
                     <meshStandardMaterial ref={meshRef1} {...texture1} />
                 </mesh>
-                <Environment background>
+                <Environment>
                     <Lightformer intensity={20} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
                     <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
                     <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />

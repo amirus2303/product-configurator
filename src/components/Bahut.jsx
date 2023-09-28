@@ -75,7 +75,7 @@ const Bahut = (props) => {
                 <meshStandardMaterial ref={meshRef11} {...texture1} />
             </mesh>
 
-            <Environment background>
+            <Environment>
                 <Lightformer intensity={10} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
                 <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
                 <Lightformer intensity={50} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />

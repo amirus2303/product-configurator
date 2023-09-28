@@ -37,7 +37,7 @@ const WovenChair = (props) => {
             <mesh castShadow receiveShadow geometry={nodes.Aset_props__M_wjglah2s_00_LOD2.geometry} material={nodes.Aset_props__M_wjglah2s_00_LOD2.material}>
                 <meshStandardMaterial ref={meshRef1}  {...texture1} />
             </mesh>
-            <Environment background>
+            <Environment>
                 <Lightformer intensity={20} color={'white'} rotation-y={Math.PI / 2} position={[-5, 1, 1]} scale={[20, 1, 1]} />
                 <Lightformer intensity={20} rotation-y={Math.PI / 2} position={[-5, 4, -1]} scale={[20, 0.9, 1]} />
                 <Lightformer intensity={60} rotation-y={Math.PI / 2} position={[10, 10, 10]} scale={[20, 1, 1]} />
